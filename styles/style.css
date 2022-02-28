@@ -1,0 +1,550 @@
+@font-face {
+  font-family: "ObjectHeavy";
+  src: url("../assets/PPObjectSans-Heavy.ttf");
+}
+@font-face {
+  font-family: "ObjectBold";
+  src: url("../assets/PPObjectSans-Bold.ttf");
+}
+@font-face {
+  font-family: "ObjectRegular";
+  src: url("../assets/PPObjectSans-Regular.ttf");
+}
+@font-face {
+  font-family: "TelegrafBold";
+  src: url("../assets/PPTelegraf-Bold.ttf");
+}
+@font-face {
+  font-family: "TelegrafRegular";
+  src: url("../assets/PPTelegraf-Regular.ttf");
+}
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article, aside, footer, header, nav, section {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+figcaption, figure, main {
+  display: block;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+b, strong {
+  font-weight: inherit;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+code, kbd, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+audio, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button, input {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html [type=button], [type=reset], [type=submit] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox], [type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details, menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* =============== BASE STYLES ================= */
+html {
+  font-size: 125%;
+  background-color: #8dd7e9;
+}
+html .desktop input[type=submit], html .desktop button {
+  font-size: 1rem;
+  font-family: "TelegrafBold";
+  letter-spacing: 1px;
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 400px;
+  height: 50px;
+  background-color: white;
+}
+html .desktop input[type=search] {
+  font-family: "TelegrafRegular";
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 400px;
+  height: 50px;
+  background-color: white;
+}
+html .desktop button, html .desktop input[type=submit] {
+  text-transform: uppercase;
+}
+html .desktop input[type=submit]:hover, html .desktop button:hover {
+  cursor: pointer;
+  background-color: rgba(214, 214, 214, 0.4);
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+html .desktop select:hover {
+  cursor: pointer;
+}
+html .desktop select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 2px solid black;
+  border-radius: 15px;
+  background-image: url("../assets/arrow-down.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: white;
+  width: 400px;
+  height: 50px;
+  padding: 10px;
+}
+html .desktop option {
+  font-family: "Helvetica";
+}
+html .desktop ul {
+  list-style-type: none;
+}
+html .desktop h1 {
+  font-size: 2.25rem;
+  font-family: "ObjectBold";
+  margin: 20px 0px 20px 0px;
+}
+html .desktop h2 {
+  font-size: 1.75rem;
+  font-family: "ObjectBold";
+  margin: 20px 0px 20px 0px;
+}
+html .desktop h3 {
+  font-size: 1rem;
+  font-family: "ObjectBold";
+  font-weight: lighter;
+}
+html .desktop span {
+  display: block;
+  font-size: 1rem;
+  font-family: "ObjectRegular";
+  font-weight: lighter;
+}
+html .desktop a {
+  font-family: "TelegrafBold";
+  text-transform: uppercase;
+}
+html .desktop p, html .desktop select, html .desktop li {
+  font-family: "TelegrafRegular";
+}
+
+/* =============== LAYOUT ================= */
+.desktop main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.desktop main .sidebar {
+  width: 700px;
+  background-color: #8dd7e9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 0px 50px 0px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.desktop main .sidebar .selections {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 490px;
+  height: 825px;
+  padding-left: 20px;
+  background-color: #eaf7fa;
+  border-radius: 15px;
+}
+.desktop main .sidebar .selections .icon-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 70%;
+  margin-top: 20px;
+}
+.desktop main .sidebar .selections .icon-bar .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 45px;
+  height: 50px;
+}
+.desktop main .sidebar .selections .selectForm div {
+  margin-top: 10px;
+}
+.desktop main .sidebar .selections .selectForm input {
+  margin-top: 15px;
+}
+.desktop main .sidebar .selections .search-span {
+  margin-top: 30px;
+}
+.desktop main .sidebar .selections .searchForm .searchbar {
+  margin: 10px 0px;
+}
+.desktop main .sidebar .selections #reload-btn {
+  margin: 20px 0px;
+}
+.desktop main .sidebar .pantry {
+  margin-top: 25px;
+  width: 475px;
+  height: 150px;
+  background-color: #eaf7fa;
+  border-radius: 15px;
+}
+.desktop main .sidebar .pantry h3, .desktop main .sidebar .pantry ul {
+  padding-left: 20px;
+}
+.desktop main .sidebar .pantry h2 {
+  padding: 10px 0px 5px 20px;
+}
+.desktop main .results {
+  background-color: #d0e4e9;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.desktop main .results .recipe-container {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  width: 300px;
+  height: 400px;
+  margin: 40px 0px 0px 40px;
+  border-radius: 15px;
+}
+.desktop main .results .recipe-container img {
+  margin-top: 10px;
+  width: 250px;
+}
+.desktop main .results .recipe-container button {
+  position: relative;
+  bottom: 0;
+  width: 200px;
+  height: 50px;
+}
+.desktop main .results .recipe-container h3 {
+  font-family: "ObjectBold";
+  font-weight: lighter;
+  font-size: 1rem;
+}
+
+body main .modal {
+  overflow: auto;
+  visibility: hidden;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+body main .modal-display {
+  background-color: white;
+  margin: 15% auto;
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 70%;
+  padding: 30px;
+}
+body main .modal-display ul {
+  list-style-type: circle;
+  padding-left: 20px;
+}
+body main .ing-flex-parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+body main .ing-flex-parent .ingredients-parent {
+  width: 45%;
+}
+body main .ing-flex-parent .instructions-parent {
+  width: 45%;
+}
+
+@media (min-width: 850px) {
+  .mobile {
+    display: none;
+  }
+}
+@media (max-width: 850px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .mobile .mobile-container {
+    width: 90%;
+    border-radius: 20px;
+    border: 2px solid black;
+    background-color: white;
+    font-family: "ObjectBold";
+    padding: 50px;
+    text-align: center;
+  }
+}

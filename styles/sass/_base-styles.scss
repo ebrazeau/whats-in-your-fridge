@@ -1,0 +1,83 @@
+/* =============== BASE STYLES ================= */
+
+html {
+    font-size: 125%;
+    background-color: #8dd7e9;
+    .desktop {
+        input[type="submit"], button {
+            font-size: 1rem;
+            font-family: "TelegrafBold";
+            letter-spacing: 1px;
+            border: 2px solid black;
+            border-radius: 15px;
+            width: 400px;
+            height: 50px;
+            background-color: white;
+        }
+        input[type="search"] {
+            font-family: "TelegrafRegular";
+            border: 2px solid black;
+            border-radius: 15px;
+            width: 400px;
+            height: 50px;
+            background-color: white;
+        }
+        button, input[type="submit"] {
+            text-transform: uppercase;
+        }
+        input[type="submit"]:hover, button:hover, {
+            cursor: pointer;
+            background-color: rgba(214, 214, 214, 0.4);
+            transition: background-color 0.2s ease-out;
+        }
+        select:hover {
+            cursor: pointer;
+        }
+        select {
+            appearance: none;
+            border: 2px solid black;
+            border-radius: 15px;
+            background-image: url("../assets/arrow-down.png");
+            background-repeat: no-repeat;
+            background-position: right;
+            background-color: white;
+            width: 400px;
+            height: 50px;
+            padding: 10px;
+        }
+        option {
+            font-family: "Helvetica";
+        }
+        ul {
+            list-style-type: none;
+        }
+        h1 {
+            font-size: 2.25rem;
+            font-family: "ObjectBold";
+            margin: 20px 0px 20px 0px;
+        }
+        h2 {
+            font-size: 1.75rem;
+            font-family: "ObjectBold";
+            margin: 20px 0px 20px 0px;
+        }
+        h3 {
+            font-size: 1rem;
+            font-family: "ObjectBold";
+            font-weight: lighter;
+        }
+        span {
+            display: block;
+            font-size: 1rem;
+            font-family: "ObjectRegular";
+            font-weight: lighter;
+        }
+        a {
+            font-family: "TelegrafBold";
+            text-transform: uppercase;
+        }
+        p, select, li {
+            font-family: "TelegrafRegular";
+        }
+    }
+}

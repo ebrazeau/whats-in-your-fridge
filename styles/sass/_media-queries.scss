@@ -1,0 +1,27 @@
+@media (min-width: 850px) {
+    .mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 850px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .mobile-container {
+            width: 90%;
+            border-radius: 20px;
+            border: 2px solid black;
+            background-color: white;
+            font-family: "ObjectBold";
+            padding: 50px;
+            text-align: center;
+        }   
+    }
+}
