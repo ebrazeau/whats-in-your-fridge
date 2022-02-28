@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's in your fridge?</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <section class="desktop">
+        <main>
+            <section class="sidebar">
+
+                <div class="selections">
+                    <div class="icon-bar">
+                        <div class="icon icon-1">
+                            <img src="/assets/Pizza.png" alt="Pizza icon">
+                        </div>
+                        <div class="icon icon-2">
+                            <img src="/assets/Sushi.png" alt="Sushi icon">
+                        </div>
+                        <div class="icon icon-3">
+                            <img src="/assets/Doughnut.png" alt="Doughnut icon">
+                        </div>
+                        <div class="icon icon-4">
+                            <img src="/assets/Coffee.png" alt="Coffee icon">
+                        </div>
+                        <div class="icon icon-5">
+                            <img src="/assets/Sandwich.png" alt="Sandwich icon">
+                        </div>
+                    </div>
+
+                    <h1>What's in your fridge?</h1>
+                    
+                    <span class="select-span">Choose some ingredients:</span>
+                    <form id="selectForm" class="selectForm">
+                        <div class="choice1">
+                            <select name="ingredientOne" id="ingredientOne">
+                            </select>
+                        </div>
+                        
+                        <div class="choice2">
+                            <select name="ingredientTwo" id="ingredientTwo">
+                            </select>
+                        </div>
+                        
+                        <div class="choice3">
+                            <select name="ingredientThree" id="ingredientThree">
+                            </select>
+                        </div>
+                        
+                        <div class="choice4">
+                            <select name="ingredientFour" id="ingredientFour">
+                            </select>
+                        </div>
+                        
+                        <div class="choice5">
+                            <select name="ingredientFive" id="ingredientFive">
+                            </select>
+                        </div>
+                        <input type="submit" value="Submit">
+                    </form>
+                    
+                    <span class="search-span">Search all foods and meals:</span>
+                    <form id="searchForm" class="searchForm">
+                        <div class="searchbar">
+                            <input type="search" id="recipeSearch" name="q">
+                        </div>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+
+                <div class="pantry">
+                    <h3>Your Ingredients</h3>
+                    <ul class="pantry-list" id="pantry-list">
+                        <li id="item1"></li>
+                        <li id="item2"></li>
+                        <li id="item3"></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="results" id="results">
+            </section>
+
+            <div class="modal" id="more-info-modal">
+                <div class="modal-display">
+                    <h2 id="source-info"></h2>
+                    <div class="dish-info">
+                        <h3>Dish Info</h3>
+                        <p id="dish-info"></p>
+                        <p id="web-address"></p>
+                    </div>
+                    <div class="ing-flex-parent">
+                        <div class="ingredients-parent">
+                            <h3>Ingredients</h3>
+                            <ul id="ingredient-list">
+                            </ul>
+                        </div>
+                        <div class="instructions-parent">
+                            <h3>Instructions</h3>
+                            <ol id="instructions">
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <script src="scripts/ingredients.js"></script>
+        <script src="scripts/script.js"></script>
+    </section>
+
+    <section class="mobile" display="none">
+        <div class="mobile-container">
+            <h1>This app is not yet optimized for mobile :( Please view on a desktop!</h1>
+        </div>
+    </section>
+</body>
+
+
+</html>
