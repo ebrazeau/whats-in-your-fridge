@@ -346,7 +346,7 @@ html .desktop p, html .desktop select, html .desktop li {
   display: flex;
 }
 .desktop main .sidebar {
-  width: 700px;
+  width: 750px;
   background-color: #8dd7e9;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -454,7 +454,7 @@ html .desktop p, html .desktop select, html .desktop li {
           align-items: center;
   background-color: white;
   width: 300px;
-  height: 400px;
+  height: 300px;
   margin: 40px 0px 0px 40px;
   border-radius: 15px;
 }

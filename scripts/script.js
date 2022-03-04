@@ -165,106 +165,100 @@ recipeApp.displayRecipes = (apiData) => {
         // create heading text
         const recipeHeading = document.createElement('h3');
         recipeHeading.innerText = recipe.title;
+
+        // ********* TEMPORARILY REMOVED ******
+
         // create button
-        const infoButton = document.createElement('button');
-        infoButton.setAttribute('id', 'modalButton');
-        infoButton.innerText = 'See More';
+        // const infoButton = document.createElement('button');
+        // infoButton.setAttribute('id', 'modalButton');
+        // infoButton.innerText = 'See More';
+
+
         // append info to our div elements
         divElement.appendChild(image);
         divElement.appendChild(recipeHeading);
-        divElement.appendChild(infoButton);
+
+        // ********* TEMPORARILY REMOVED ******
+        // divElement.appendChild(infoButton);
+
+
         // append div to section
         recipeSection.appendChild(divElement);
 
+        
+        // ********* TEMPORARILY REMOVED ******
+        
+    // get div element for modal
+    // const modal = document.getElementById("more-info-modal");
+    // event listener for modal button
+    //     infoButton.addEventListener('click', function () {
+    //         document.getElementById('more-info-modal').style.visibility = 'visible';
 
-        // get div element for modal
-        const modal = document.getElementById("more-info-modal");
-        // event listener for modal button
-        infoButton.addEventListener('click', function () {
-            document.getElementById('more-info-modal').style.visibility = 'visible';
+    //         // elements from modal div
+    //         const source = document.getElementById('source-info');
+    //         const dishInfo = document.getElementById('dish-info');
 
-            // elements from modal div
-            const source = document.getElementById('source-info');
-            const dishInfo = document.getElementById('dish-info');
-
-            const missingIngredients = document.getElementById('missed-ingredients');
-            const unusedIngredients = document.getElementById('unused-ingredients');
-            // const summeryInfo = document.getElementById('dish-info');
-            // const urlInfo = document.getElementById('web-address');
+    //         const missingIngredients = document.getElementById('missed-ingredients');
+    //         const unusedIngredients = document.getElementById('unused-ingredients');
+    //         // const summeryInfo = document.getElementById('dish-info');
+    //         // const urlInfo = document.getElementById('web-address');
             
-            // fill modal with info
-            // call complex search api
-            const recipeInformationBulk = new URL(`https://api.spoonacular.com/recipes/${recipe.id}/information`);
+    //         // fill modal with info
+    //         // call complex search api
+    //         const recipeInformationBulk = new URL(`https://cors-anywhere.herokuapp.com/api.spoonacular.com/recipes/${recipe.id}/information`);
 
-            fetch(recipeInformationBulk)
-                .then((response) => {
-                    if (response.ok) {
-                        return response.json();
-                    } else {
-                        throw new Error;
-                    }
-                }).then((jsonData) => {
-                    console.log(jsonData);
-                    if (jsonData.length === 0) {
-                        console.log('No information found about this recipe :(');
-                    } else {
-                        source.innerText = jsonData.title;
-                        dishInfo.innerHTML = jsonData.summary;
+    //         fetch(recipeInformationBulk)
+    //             .then((response) => {
+    //                 if (response.ok) {
+    //                     return response.json();
+    //                 } else {
+    //                     throw new Error;
+    //                 }
+    //             }).then((jsonData) => {
+    //                 console.log(jsonData);
+    //                 if (jsonData.length === 0) {
+    //                     console.log('No information found about this recipe :(');
+    //                 } else {
+    //                     source.innerText = jsonData.title;
+    //                     dishInfo.innerHTML = jsonData.summary;
+                        
 
-                        // display ingredients
-                        const ul = document.getElementById('ingredient-list');
-                        ul.innerHTML = "";
-                        jsonData.extendedIngredients.forEach((ingredient) => {
-                            const li = document.createElement('li');
-                            li.innerText = ingredient.original;
-                            ul.append(li);
-                        });
+    //                     // display ingredients
+    //                     const ul = document.getElementById('ingredient-list');
+    //                     ul.innerHTML = "";
+    //                     jsonData.extendedIngredients.forEach((ingredient) => {
+    //                         const li = document.createElement('li');
+    //                         li.innerText = ingredient.original;
+    //                         ul.append(li);
+    //                     });
 
-                        // display instructions if they exist 
-                        const ol = document.getElementById('instructions');
-                        ol.innerHTML = "";
-                        if (jsonData.analyzedInstructions.length === 0) {
-                            const span = document.createElement('span');
-                            span.innerText = "No instructions were found :("
-                            ol.replaceWith(span);
-                        } else {
-                            jsonData.analyzedInstructions[0].steps.forEach((instruction) => {
-                                const li = document.createElement('li');
-                                li.innerText = instruction.step;
-                                ol.appendChild(li);
-                            });
-                        }
-                    }
-                }).catch((Error) => {
-                    console.log(Error);
-                });
+    //                     // display instructions if they exist 
+    //                     const ol = document.getElementById('instructions');
+    //                     ol.innerHTML = "";
+    //                     if (jsonData.analyzedInstructions.length === 0) {
+    //                         const span = document.createElement('span');
+    //                         span.innerText = "No instructions were found :("
+    //                         ol.replaceWith(span);
+    //                     } else {
+    //                         jsonData.analyzedInstructions[0].steps.forEach((instruction) => {
+    //                             const li = document.createElement('li');
+    //                             li.innerText = instruction.step;
+    //                             ol.appendChild(li);
+    //                         });
+    //                     }
+    //                 }
+    //             }).catch((Error) => {
+    //                 console.log(Error);
+    //             });
+    // });
 
-            // summeryInfo.innerHTML = recipe.summary;
-            // urlInfo.innerHTML = `<a href="${recipe.spoonacularSourceUrl}">More Info & Instructions</a>`;
-            // loop through missed ingredients array and display each item
-        //     recipe.missedIngredients.forEach((item) => {
-        //         missingIngredients.innerHTML = "";
-        //         const ingredient = document.createElement('li');
-        //         ingredient.innerText = item.original;
-        //         missingIngredients.append(ingredient);
-        //     })
-    
-        //     // same thing for the unused ingredients
-        //     recipe.unusedIngredients.forEach((item) => {
-        //         const ingredient = document.createElement('li');
-        //         ingredient.innerText = item.original;
-        //         unusedIngredients.innerHTML = "";
-        //         unusedIngredients.appendChild(ingredient);
-        // })
+    //     window.addEventListener('click', function (event) {
+    //         if (event.target == modal) {
+    //             document.getElementById('more-info-modal').style.visibility = "hidden"
+    //         }
+    //     })
+    // })
     });
-
-        window.addEventListener('click', function (event) {
-            if (event.target == modal) {
-                document.getElementById('more-info-modal').style.visibility = "hidden"
-            }
-        })
-    })
-
 }
 
 
