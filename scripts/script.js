@@ -51,6 +51,7 @@ recipeApp.getUserInput = () => {
     const ingredientForm = document.querySelector('#selectForm');
     ingredientForm.addEventListener('submit', (event) => {
         event.preventDefault();
+
         recipeApp.userChoices[0] = document.querySelector("#ingredientOne").value;
         recipeApp.userChoices[1] = document.querySelector("#ingredientTwo").value;
         recipeApp.userChoices[2] = document.querySelector("#ingredientThree").value;
@@ -113,12 +114,14 @@ recipeApp.getRecipesByIngredients = () => {
 
     const findByIngredients = new URL(recipeApp.url2);
     findByIngredients.search = new URLSearchParams({
-        ingredients: recipeApp.userChoices[1],
+        ingredients: recipeApp.userChoices,
         addRecipeInformation: true,
         fillIngredients: true,
         number: 15,
         apiKey: recipeApp.apiKey,
     });
+
+    console.log(findByIngredients);
 
     fetch(findByIngredients)
         .then((response) => {
@@ -168,9 +171,9 @@ recipeApp.displayRecipes = (apiData) => {
 
         // ********* TEMPORARILY REMOVED ******
 
-        // create button
+        // // create button
         // const infoButton = document.createElement('button');
-        // infoButton.setAttribute('id', 'modalButton');
+        // infoButton.setAttribute('isd', 'modalButton');
         // infoButton.innerText = 'See More';
 
 
@@ -178,7 +181,7 @@ recipeApp.displayRecipes = (apiData) => {
         divElement.appendChild(image);
         divElement.appendChild(recipeHeading);
 
-        // ********* TEMPORARILY REMOVED ******
+        // // ********* TEMPORARILY REMOVED ******
         // divElement.appendChild(infoButton);
 
 
@@ -188,9 +191,9 @@ recipeApp.displayRecipes = (apiData) => {
         
         // ********* TEMPORARILY REMOVED ******
         
-    // get div element for modal
+    // // get div element for modal
     // const modal = document.getElementById("more-info-modal");
-    // event listener for modal button
+    // // event listener for modal button
     //     infoButton.addEventListener('click', function () {
     //         document.getElementById('more-info-modal').style.visibility = 'visible';
 
@@ -198,13 +201,13 @@ recipeApp.displayRecipes = (apiData) => {
     //         const source = document.getElementById('source-info');
     //         const dishInfo = document.getElementById('dish-info');
 
-    //         const missingIngredients = document.getElementById('missed-ingredients');
-    //         const unusedIngredients = document.getElementById('unused-ingredients');
+    //         // const missingIngredients = document.getElementById('missed-ingredients');
+    //         // const unusedIngredients = document.getElementById('unused-ingredients');
     //         // const summeryInfo = document.getElementById('dish-info');
     //         // const urlInfo = document.getElementById('web-address');
             
-    //         // fill modal with info
-    //         // call complex search api
+    // //         // fill modal with info
+    // //         // call complex search api
     //         const recipeInformationBulk = new URL(`https://cors-anywhere.herokuapp.com/api.spoonacular.com/recipes/${recipe.id}/information`);
 
     //         fetch(recipeInformationBulk)
@@ -212,6 +215,7 @@ recipeApp.displayRecipes = (apiData) => {
     //                 if (response.ok) {
     //                     return response.json();
     //                 } else {
+    //                     console.log(response);
     //                     throw new Error;
     //                 }
     //             }).then((jsonData) => {
@@ -257,7 +261,6 @@ recipeApp.displayRecipes = (apiData) => {
     //             document.getElementById('more-info-modal').style.visibility = "hidden"
     //         }
     //     })
-    // })
     });
 }
 
